@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:taxi/ressources/themes.dart';
 import 'package:taxi/pages/welcome.dart';
 import 'package:taxi/pages/login.dart';
+import 'package:taxi/pages/register02.dart';
 
 class Register01 extends StatefulWidget {
   Register01({Key? key}) : super(key: key);
@@ -127,7 +128,7 @@ class _Register01State extends State<Register01> {
             ),
             space(size.height / 25.0),
             button(
-                context, 'Continuer', whiteText, darkOrange, 5.0, Register01()),
+                context, 'Continuer', whiteText, darkOrange, 5.0, Register02()),
             space(5.0),
             SizedBox(
               width: 325,
@@ -142,8 +143,12 @@ class _Register01State extends State<Register01> {
                   ),
                   TextButton(
                     onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Login()));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Login(),
+                        ),
+                      );
                     },
                     child: Text(
                       'Connectez-vous',

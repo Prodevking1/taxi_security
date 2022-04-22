@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:taxi/ressources/themes.dart';
 import 'package:taxi/pages/login.dart';
-import 'package:taxi/pages/register01';
+import 'package:taxi/pages/register01.dart';
 
 class Welcome extends StatefulWidget {
   Welcome({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class _WelcomeState extends State<Welcome> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: whiteText,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +36,8 @@ class _WelcomeState extends State<Welcome> {
             space(size.height / 10.0),
             button(context, 'Connexion', darkOrange, whiteText, 5.0, Login()),
             space(15.0),
-            button(context, 'Inscription', whiteText, darkOrange, 5.0, Login()),
+            button(context, 'Inscription', whiteText, darkOrange, 5.0,
+                Register01()),
           ],
         ),
       ),
