@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 /* Colors */
 
-Color darkOrange = const Color.fromRGBO(183, 65, 14, 1);
+Color darkOrange = const Color.fromRGBO(183,65,14,1);
 Color blackText = Colors.black;
 Color whiteText = Colors.white;
 Color greyText = const Color.fromRGBO(82, 82, 82, 1);
@@ -62,7 +62,46 @@ Icon mail = Icon(
   size: 20.0,
   color: grey,
 );
-
+Icon id = Icon(
+  Icons.assignment_ind_outlined,
+  size: 35.0,
+  color: blackText,
+);
+Icon settings = Icon(
+  Icons.settings_outlined,
+  size: 32.0,
+  color: blackText,
+);
+Icon x = Icon(
+  Icons.close_outlined,
+  size: 36.0,
+  color: blackText,
+);
+Icon infos = Icon(
+  Icons.help_outline_outlined,
+  size: 36.0,
+  color: blackText,
+);
+Icon chevonRight = Icon(
+  Icons.chevron_right_outlined,
+  size: 23.0,
+  color: blackText,
+);
+Icon details = Icon(
+  Icons.notes_outlined,
+  size: 36.0,
+  color: blackText,
+);
+Icon abonnement = Icon(
+  Icons.description_outlined,
+  size: 36.0,
+  color: blackText,
+);
+Icon logout = Icon(
+  Icons.logout,
+  size: 36.0,
+  color: blackText,
+);
 /* Widgets */
 
 SizedBox space(height) {
@@ -123,5 +162,54 @@ Container button(context, String text, Color txtcolor, Color bgcolor,
         ),
       ),
     ),
+  );
+}
+
+//row card pour les settings
+Column rowSetting(context, Widget prefixICon, String title, Widget routeNAme) {
+  return Column(
+    children: <Widget>[
+      Container(
+        margin: const EdgeInsets.only(
+          left: 30.0,
+        ),
+        width: 325.0,
+        height: 59.0,
+        child: Card(
+          color: cardColor,
+          child: Stack(
+            children: <Widget>[
+              IconButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => routeNAme)));
+                  },
+                  icon: prefixICon),
+              Container(
+                margin: const EdgeInsets.only(left: 50.0),
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: ((context) => routeNAme)));
+                  },
+                  child: Text(
+                    title,
+                    style: heading2.copyWith(
+                        fontSize: 18.0,
+                        color: blackText,
+                        fontWeight: FontWeight.w400),
+                  ),
+                ),
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 290.0, top: 15.0),
+                child: chevonRight,
+              ),
+            ],
+          ),
+        ),
+      ),
+      space(10.0),
+    ],
   );
 }
