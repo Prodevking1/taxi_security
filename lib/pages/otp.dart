@@ -105,7 +105,7 @@ class _OtpState extends State<Otp> {
                   Text(
                     'Vous avez déjà un compte ?  ',
                     style: heading2.copyWith(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.w400,
                         color: greyText),
                   ),
@@ -121,7 +121,7 @@ class _OtpState extends State<Otp> {
                     child: Text(
                       'Connectez-vous',
                       style: heading2.copyWith(
-                          fontSize: 16.0,
+                          fontSize: 13.5,
                           fontWeight: FontWeight.w400,
                           color: darkOrange),
                     ),

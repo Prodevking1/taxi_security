@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 /* Colors */
 
-Color darkOrange = const Color.fromRGBO(183,65,14,1);
+Color darkOrange = const Color.fromRGBO(183, 65, 14, 1);
 Color blackText = Colors.black;
 Color whiteText = Colors.white;
 Color greyText = const Color.fromRGBO(82, 82, 82, 1);
@@ -173,7 +173,7 @@ Column rowSetting(context, Widget prefixICon, String title, Widget routeNAme) {
         margin: const EdgeInsets.only(
           left: 30.0,
         ),
-        width: 325.0,
+        width: 350.0,
         height: 59.0,
         child: Card(
           color: cardColor,
@@ -202,7 +202,7 @@ Column rowSetting(context, Widget prefixICon, String title, Widget routeNAme) {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(left: 290.0, top: 15.0),
+                margin: const EdgeInsets.only(left: 310.0, top: 15.0),
                 child: chevonRight,
               ),
             ],

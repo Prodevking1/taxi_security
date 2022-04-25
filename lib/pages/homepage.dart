@@ -84,6 +84,7 @@ class _HomepageState extends State<Homepage> {
                         style: heading2.copyWith(
                           fontWeight: FontWeight.w500,
                           color: blackText,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -137,6 +138,7 @@ class _HomepageState extends State<Homepage> {
                         style: heading2.copyWith(
                           fontWeight: FontWeight.w500,
                           color: blackText,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -190,6 +192,7 @@ class _HomepageState extends State<Homepage> {
                         style: heading2.copyWith(
                           fontWeight: FontWeight.w500,
                           color: blackText,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -243,6 +246,7 @@ class _HomepageState extends State<Homepage> {
                         style: heading2.copyWith(
                           fontWeight: FontWeight.w500,
                           color: blackText,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),
@@ -296,6 +300,7 @@ class _HomepageState extends State<Homepage> {
                         style: heading2.copyWith(
                           fontWeight: FontWeight.w500,
                           color: blackText,
+                          fontSize: 18.0,
                         ),
                       ),
                     ),

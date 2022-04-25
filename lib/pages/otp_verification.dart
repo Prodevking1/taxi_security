@@ -6,6 +6,7 @@ import 'package:taxi/ressources/themes.dart';
 import 'package:taxi/pages/welcome.dart';
 import 'package:taxi/pages/login.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:taxi/pages/homepage.dart';
 
 class OtpVerification extends StatefulWidget {
   OtpVerification({Key? key}) : super(key: key);
@@ -56,7 +57,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                 ),
               ],
             ),
-            space(size.height / 25.0),
+            space(size.height / 30.0),
             Stack(
               children: <Widget>[
                 Image.asset('assets/images/otp.png'),
@@ -92,9 +93,7 @@ class _OtpVerificationState extends State<OtpVerification> {
                 ],
               ),
             ),
-            space(size.height / 20.0),
-            inputField("Numéro de téléphone", phone),
-            space(20.0),
+            space(size.height / 15.0),
             SizedBox(
               width: 323.0,
               height: 51.0,
@@ -113,8 +112,8 @@ class _OtpVerificationState extends State<OtpVerification> {
               ),
             ),
             space(size.height / 30.0),
-            button(context, 'Confirmer', whiteText, darkOrange, 5.0,
-                OtpVerification()),
+            button(
+                context, 'Confirmer', whiteText, darkOrange, 5.0, Homepage()),
           ],
         ),
       ),

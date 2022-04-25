@@ -135,9 +135,9 @@ class _Register01State extends State<Register01> {
               child: Row(
                 children: <Widget>[
                   Text(
-                    'Vous avez déjà un compte ?  ',
+                    'Vous avez déjà un compte ?',
                     style: heading2.copyWith(
-                        fontSize: 16.0,
+                        fontSize: 15.0,
                         fontWeight: FontWeight.w400,
                         color: greyText),
                   ),
@@ -153,7 +153,7 @@ class _Register01State extends State<Register01> {
                     child: Text(
                       'Connectez-vous',
                       style: heading2.copyWith(
-                          fontSize: 16.0,
+                          fontSize: 14,
                           fontWeight: FontWeight.w400,
                           color: darkOrange),
                     ),
