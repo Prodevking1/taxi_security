@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/utils/constants.dart';
+import 'package:taxi/constants/const/app_colors.dart';
 import 'package:taxi/views/widgets/image_box.dart';
 import 'package:taxi/views/widgets/navigation_bar.dart';
 import 'package:taxi/views/widgets/rounded_button.dart';
-/* import 'package:taxi/views/pages/login.dart';
-import 'package:taxi/views/pages/register01.dart'; */
+
+import '../../constants/all_const.dart';
 
 class Welcome extends StatefulWidget {
   Welcome({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _WelcomeState extends State<Welcome> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: ThemeConfig.whiteText,
+      backgroundColor: AppColors.whiteText,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -28,22 +28,22 @@ class _WelcomeState extends State<Welcome> {
             Center(
               child: Text(
                 'Taxi',
-                style: ThemeConfig.heading2.copyWith(fontSize: 25.0),
+                style: AppTextStyle.heading2.copyWith(fontSize: 25.0),
               ),
             ),
             space(size.height / 9.0),
             const ImageBox(path: 'assets/images/map.png'),
             space(size.height / 10.0),
             RoundedButton(
-              buttonColor: ThemeConfig.whiteText,
+              buttonColor: AppColors.whiteText,
               buttonText: 'Connexion',
-              textColor: ThemeConfig.darkOrange,
+              textColor: AppColors.darkOrange,
             ),
             space(size.height / 40.0),
             RoundedButton(
-              buttonColor: ThemeConfig.darkOrange,
+              buttonColor: AppColors.darkOrange,
               buttonText: 'Inscription',
-              textColor: ThemeConfig.whiteText,
+              textColor: AppColors.whiteText,
             ),
           ],
         ),

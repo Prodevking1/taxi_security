@@ -1537,7 +1537,7 @@
 	"explorer.confirmDelete": false,
 
 	// Contrôle si l’Explorateur doit demander confirmation pour déplacer des fichiers et des dossiers par glisser/déplacer.
-	"explorer.confirmDragAndDrop": true,
+	"explorer.confirmDragAndDrop": false,
 
 	// Contrôle si l'explorateur doit demander une confirmation lors de l'annulation.
 	//  - verbose: Explorer vous demandera avant toutes les opérations d'annulation.

@@ -1,6 +1,6 @@
-import 'package:taxi/utils/constants.dart';
-
 import 'package:flutter/material.dart';
+import 'package:taxi/constants/const/app_colors.dart';
+import 'package:taxi/constants/const/app_textstyle.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({
@@ -22,7 +22,7 @@ class Navbar extends StatelessWidget {
           width: 40.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6.0),
-            border: Border.all(color: ThemeConfig.grey),
+            border: Border.all(color: AppColors.grey),
           ),
           child: Center(
             child: GestureDetector(
@@ -34,7 +34,7 @@ class Navbar extends StatelessWidget {
         Center(
           child: Text(
             title!,
-            style: ThemeConfig.heading2.copyWith(fontSize: 25.0),
+            style: AppTextStyle.heading2.copyWith(fontSize: 25.0),
           ),
         )
       ],

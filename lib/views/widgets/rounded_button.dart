@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/utils/constants.dart';
+import 'package:taxi/constants/const/app_colors.dart';
+import 'package:taxi/constants/const/app_textstyle.dart';
 
 class RoundedButton extends StatelessWidget {
   const RoundedButton({
@@ -25,19 +26,19 @@ class RoundedButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(buttonBorder ?? 6.0),
         border: Border.all(
-          color: textColor ?? ThemeConfig.darkOrange,
+          color: textColor ?? AppColors.darkOrange,
         ),
       ),
       child: Material(
         borderRadius: BorderRadius.circular(buttonBorder ?? 6.0),
-        color: buttonColor ?? ThemeConfig.darkOrange,
+        color: buttonColor ?? AppColors.darkOrange,
         child: TextButton(
           onPressed: onPressed,
           child: Center(
             child: Text(
               buttonText!,
-              style: ThemeConfig.heading2
-                  .copyWith(color: textColor ?? ThemeConfig.darkOrange),
+              style: AppTextStyle.heading2
+                  .copyWith(color: textColor ?? AppColors.darkOrange),
             ),
           ),
         ),
