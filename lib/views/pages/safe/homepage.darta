@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/pages/settings.dart';
-import 'package:taxi/ressources/themes.dart';
+import 'package:taxi/views/pages/settings.dart';
+import 'package:taxi/utils/constants.dart';
 
 class Homepage extends StatefulWidget {
   Homepage({Key? key}) : super(key: key);
@@ -19,7 +19,7 @@ class _HomepageState extends State<Homepage> {
       'Sam 26/03/22',
     ];
     return Scaffold(
-      backgroundColor: whiteText,
+      backgroundColor: ThemeConfig.whiteText,
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -30,9 +30,9 @@ class _HomepageState extends State<Homepage> {
                 children: <Widget>[
                   Text(
                     'Hello Sylvain',
-                    style: heading2.copyWith(
+                    style: ThemeConfig.heading2.copyWith(
                         height: 1.6,
-                        color: blackText,
+                        color: ThemeConfig.blackText,
                         fontSize: 25.0,
                         fontWeight: FontWeight.w500),
                   ),
@@ -71,7 +71,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.only(bottom: 25.0),
                 decoration: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: grey, width: 2),
+                    bottom: BorderSide(color: ThemeConfig.grey, width: 2),
                   ),
                 ),
                 child: Stack(
@@ -81,9 +81,9 @@ class _HomepageState extends State<Homepage> {
                       padding: EdgeInsets.only(left: size.width / 4.0),
                       child: Text(
                         'Bingerville - Koumassi',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 18.0,
                         ),
                       ),
@@ -93,9 +93,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 25.0),
                       child: Text(
                         'Client - #11425',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                         ),
                       ),
@@ -105,9 +105,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 14.0),
                       child: Text(
                         title[2],
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                           fontStyle: FontStyle.italic,
                         ),
@@ -125,7 +125,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.only(bottom: 25.0),
                 decoration: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: grey, width: 2),
+                    bottom: BorderSide(color: ThemeConfig.grey, width: 2),
                   ),
                 ),
                 child: Stack(
@@ -135,9 +135,9 @@ class _HomepageState extends State<Homepage> {
                       padding: EdgeInsets.only(left: size.width / 4.0),
                       child: Text(
                         'Bingerville - Koumassi',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 18.0,
                         ),
                       ),
@@ -147,9 +147,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 25.0),
                       child: Text(
                         'Client - #11425',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                         ),
                       ),
@@ -159,9 +159,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 14.0),
                       child: Text(
                         title[2],
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                           fontStyle: FontStyle.italic,
                         ),
@@ -179,7 +179,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.only(bottom: 25.0),
                 decoration: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: grey, width: 2),
+                    bottom: BorderSide(color: ThemeConfig.grey, width: 2),
                   ),
                 ),
                 child: Stack(
@@ -189,9 +189,9 @@ class _HomepageState extends State<Homepage> {
                       padding: EdgeInsets.only(left: size.width / 4.0),
                       child: Text(
                         'Bingerville - Koumassi',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 18.0,
                         ),
                       ),
@@ -201,9 +201,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 25.0),
                       child: Text(
                         'Client - #11425',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                         ),
                       ),
@@ -213,9 +213,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 14.0),
                       child: Text(
                         title[2],
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                           fontStyle: FontStyle.italic,
                         ),
@@ -233,7 +233,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.only(bottom: 25.0),
                 decoration: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: grey, width: 2),
+                    bottom: BorderSide(color: ThemeConfig.grey, width: 2),
                   ),
                 ),
                 child: Stack(
@@ -243,9 +243,9 @@ class _HomepageState extends State<Homepage> {
                       padding: EdgeInsets.only(left: size.width / 4.0),
                       child: Text(
                         'Bingerville - Koumassi',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 18.0,
                         ),
                       ),
@@ -255,9 +255,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 25.0),
                       child: Text(
                         'Client - #11425',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                         ),
                       ),
@@ -267,9 +267,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 14.0),
                       child: Text(
                         title[2],
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                           fontStyle: FontStyle.italic,
                         ),
@@ -287,7 +287,7 @@ class _HomepageState extends State<Homepage> {
                 padding: const EdgeInsets.only(bottom: 25.0),
                 decoration: BoxDecoration(
                   border: Border(
-                    bottom: BorderSide(color: grey, width: 2),
+                    bottom: BorderSide(color: ThemeConfig.grey, width: 2),
                   ),
                 ),
                 child: Stack(
@@ -297,9 +297,9 @@ class _HomepageState extends State<Homepage> {
                       padding: EdgeInsets.only(left: size.width / 4.0),
                       child: Text(
                         'Bingerville - Koumassi',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w500,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 18.0,
                         ),
                       ),
@@ -309,9 +309,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 25.0),
                       child: Text(
                         'Client - #11425',
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                         ),
                       ),
@@ -321,9 +321,9 @@ class _HomepageState extends State<Homepage> {
                           left: size.width / 4.0, top: size.height / 14.0),
                       child: Text(
                         title[2],
-                        style: heading2.copyWith(
+                        style: ThemeConfig.heading2.copyWith(
                           fontWeight: FontWeight.w400,
-                          color: blackText,
+                          color: ThemeConfig.blackText,
                           fontSize: 16.0,
                           fontStyle: FontStyle.italic,
                         ),

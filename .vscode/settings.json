@@ -1534,7 +1534,7 @@
 	"explorer.compactFolders": true,
 
 	// Contrôle si l’Explorateur devrait demander confirmation lorsque vous supprimez un fichier via la corbeille.
-	"explorer.confirmDelete": true,
+	"explorer.confirmDelete": false,
 
 	// Contrôle si l’Explorateur doit demander confirmation pour déplacer des fichiers et des dossiers par glisser/déplacer.
 	"explorer.confirmDragAndDrop": true,

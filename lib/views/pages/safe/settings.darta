@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/pages/settings.dart';
-import 'package:taxi/ressources/themes.dart';
+import 'package:taxi/views/pages/subscription.dart';
+import 'package:taxi/utils/constants.dart';
+import 'package:taxi/views/pages/login.dart';
+import 'package:taxi/views/pages/id.dart';
+import 'package:taxi/views/pages/homepage.dart';
 
-class Subscription extends StatefulWidget {
-  Subscription({Key? key}) : super(key: key);
+class Settings extends StatefulWidget {
+  Settings({Key? key}) : super(key: key);
 
   @override
-  State<Subscription> createState() => _SubscriptionState();
+  State<Settings> createState() => _SettingsState();
 }
 
-class _SubscriptionState extends State<Subscription> {
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -33,29 +36,35 @@ class _SubscriptionState extends State<Subscription> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: ((context) => Settings())));
+                                    builder: ((context) => Homepage())));
                           },
                           icon: x)),
                 ),
                 Center(
                   child: Text(
-                    'Mon abonnement',
+                    'Paramètres',
                     style: heading2.copyWith(
                         fontSize: 25.0,
                         height: 1.5,
                         fontWeight: FontWeight.w500),
                   ),
                 ),
+                Container(
+                    margin: EdgeInsets.only(
+                      top: size.height / 10.0,
+                    ),
+                    child: Column(children: <Widget>[
+                      rowSetting(
+                          context, infos, 'Contacter le support', Settings()),
+                      rowSetting(context, details, 'Mes informations', Id()),
+                      rowSetting(
+                          context, details, 'Mon abonnement', Subscription()),
+                      rowSetting(context, abonnement, 'Termes et Conditions',
+                          Settings()),
+                      rowSetting(context, logout, 'Déconnexion', Login()),
+                    ]))
               ],
             ),
-            space(size.height / 25.0),
-            Card(
-              color: cardColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(6.0),
-              ),
-              child: SizedBox(width: 325.0, height: 136.0),
-            )
           ],
         ),
       ),

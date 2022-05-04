@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:taxi/ressources/themes.dart';
-import 'package:taxi/pages/login.dart';
-import 'package:taxi/pages/register01.dart';
+import 'package:taxi/utils/constants.dart';
+import 'package:taxi/views/widgets/navigation_bar.dart';
+import 'package:taxi/views/widgets/rounded_button.dart';
+/* import 'package:taxi/views/pages/login.dart';
+import 'package:taxi/views/pages/register01.dart'; */
 
 class Welcome extends StatefulWidget {
   Welcome({Key? key}) : super(key: key);
@@ -17,27 +18,18 @@ class _WelcomeState extends State<Welcome> {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: whiteText,
+      backgroundColor: ThemeConfig.whiteText,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             space(size.height / 10.0),
-            Center(
-              child: Text(
-                'ID TAXI',
-                style: heading2.copyWith(fontSize: 25.0),
-              ),
-            ),
+            const Navbar(title: 'Taxi'),
             space(size.height / 9.0),
             Stack(
               children: <Widget>[Image.asset('assets/images/map.png')],
             ),
             space(size.height / 10.0),
-            button(context, 'Connexion', darkOrange, whiteText, 5.0, Login()),
-            space(15.0),
-            button(context, 'Inscription', whiteText, darkOrange, 5.0,
-                Register01()),
           ],
         ),
       ),

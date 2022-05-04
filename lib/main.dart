@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/pages/welcome.dart';
+import 'package:taxi/views/pages/welcome.dart';
 
 void main() {
   runApp(const MyApp());
