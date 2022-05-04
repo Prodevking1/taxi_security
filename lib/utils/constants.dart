@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:flutter/widgets.dart';
 
 class ThemeConfig {
   /* Colors */
@@ -15,7 +13,7 @@ class ThemeConfig {
   /* Fonts */
   static TextStyle heading2 = const TextStyle(
     fontSize: 20.0,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w500,
     fontFamily: 'Lato',
     color: Colors.black,
   );
@@ -141,12 +139,12 @@ Align historyField(String dtae, String type, String prix, width) {
 class CustomIcons {
   CustomIcons._();
 
-  static const _kFontFam = 'CustomIcons';
+  static const _kFontFam = 'customIcons';
   static const String? _kFontPkg = null;
 
-  static const IconData accessArlarm =
+  static const IconData accessAlarm =
       IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData charHelp =
+  static const IconData chatHelp =
       IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData file =
       IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
@@ -154,7 +152,7 @@ class CustomIcons {
       IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData mapMarker =
       IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData padLock =
+  static const IconData padlock =
       IconData(0xe805, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData settings =
       IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
@@ -166,4 +164,14 @@ class CustomIcons {
       IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData idWallet =
       IconData(0xe80a, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData camera =
+      IconData(0xe80b, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData chevronleft =
+      IconData(0xe80d, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData close =
+      IconData(0xe80e, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData chevronright =
+      IconData(0xe80f, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData fileuploaded =
+      IconData(0xe811, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

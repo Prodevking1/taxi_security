@@ -5,10 +5,10 @@ class RoundedButton extends StatelessWidget {
   const RoundedButton({
     Key? key,
     this.onPressed,
-    this.buttonColor,
+    required this.buttonColor,
     this.buttonBorder,
-    this.buttonText,
-    this.textColor,
+    required this.buttonText,
+    required this.textColor,
   }) : super(key: key);
 
   final VoidCallback? onPressed;
@@ -25,7 +25,7 @@ class RoundedButton extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(buttonBorder ?? 6.0),
         border: Border.all(
-          color: buttonColor ?? ThemeConfig.darkOrange,
+          color: textColor ?? ThemeConfig.darkOrange,
         ),
       ),
       child: Material(
@@ -35,9 +35,9 @@ class RoundedButton extends StatelessWidget {
           onPressed: onPressed,
           child: Center(
             child: Text(
-              'text',
-              style:
-                  ThemeConfig.heading2.copyWith(color: ThemeConfig.darkOrange),
+              buttonText!,
+              style: ThemeConfig.heading2
+                  .copyWith(color: textColor ?? ThemeConfig.darkOrange),
             ),
           ),
         ),
@@ -45,35 +45,3 @@ class RoundedButton extends StatelessWidget {
     );
   }
 }
-
-/* Container button(context, String text, Color txtcolor, Color bgcolor,
-    double size, Widget routeName) {
-  return Container(
-    width: 325.0,
-    height: 53.0,
-    decoration: BoxDecoration(
-      borderRadius: BorderRadius.circular(6.0),
-      border: Border.all(
-        // ignore: unrelated_type_equality_checks
-        color: bgcolor == 'whiteText' ? whiteText : darkOrange,
-      ),
-    ),
-    child: Material(
-      borderRadius: BorderRadius.circular(6.0),
-      color: bgcolor,
-      child: TextButton(
-        onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: ((context) => routeName)));
-        },
-        child: Center(
-          child: Text(
-            text,
-            style: heading2.copyWith(color: txtcolor),
-          ),
-        ),
-      ),
-    ),
-  );
-} */
-
