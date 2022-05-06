@@ -57,7 +57,7 @@ class Welcome1 extends StatelessWidget {
                 ],
               ),
             ),
-            space(size.height / 20.0),
+            space(size.height / 15.0),
             const SizedBox(
               width: 323.0,
               height: 53.0,
