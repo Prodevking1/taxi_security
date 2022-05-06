@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/constants/const/app_colors.dart';
-import 'package:taxi/views/widgets/image_box.dart';
-import 'package:taxi/views/widgets/navigation_bar.dart';
-import 'package:taxi/views/widgets/rounded_button.dart';
-
-import '../../constants/all_const.dart';
+import 'package:taxi/constants/all.dart';
+import 'package:taxi/views/screens/all.dart';
+import 'package:taxi/views/widgets/all.dart';
 
 class Welcome extends StatefulWidget {
   Welcome({Key? key}) : super(key: key);
@@ -38,12 +35,14 @@ class _WelcomeState extends State<Welcome> {
               buttonColor: AppColors.whiteText,
               buttonText: 'Connexion',
               textColor: AppColors.darkOrange,
+              toScreen: const Login(),
             ),
             space(size.height / 40.0),
             RoundedButton(
               buttonColor: AppColors.darkOrange,
               buttonText: 'Inscription',
               textColor: AppColors.whiteText,
+              toScreen: const SignUp(),
             ),
           ],
         ),

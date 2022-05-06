@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/constants/const/app_colors.dart';
-import 'package:taxi/constants/const/app_textstyle.dart';
+
+import 'package:taxi/constants/all.dart';
 
 class Navbar extends StatelessWidget {
   const Navbar({
     Key? key,
-    required this.title,
+    this.title,
     this.icon,
+    this.toScreen,
   }) : super(key: key);
 
   final String? title;
   final IconData? icon;
+  final Widget? toScreen;
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +29,19 @@ class Navbar extends StatelessWidget {
           child: Center(
             child: GestureDetector(
               child: Icon(icon),
-              onTap: () {},
+              onTap: () => Navigator.push(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (c, a1, a2) => toScreen!,
+                  transitionDuration: const Duration(seconds: 0),
+                ),
+              ),
             ),
           ),
         ),
         Center(
           child: Text(
-            title!,
+            title ?? '',
             style: AppTextStyle.heading2.copyWith(fontSize: 25.0),
           ),
         )

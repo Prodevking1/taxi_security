@@ -1076,7 +1076,7 @@
 	//  - vs-minimal
 	//  - vs-seti
 	//  - material-icon-theme
-	"workbench.iconTheme": "vs-seti",
+	"workbench.iconTheme": "vscode-icons",
 
 	// Contrôle si la navigation au clavier dans les listes et les arborescences est automatiquement déclenchée simplement par la frappe. Si défini sur 'false', la navigation au clavier est seulement déclenchée avec l'exécution de la commande 'list.toggleKeyboardNavigation', à laquelle vous pouvez attribuer un raccourci clavier.
 	"workbench.list.automaticKeyboardNavigation": true,
