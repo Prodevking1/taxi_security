@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:taxi/constants/all.dart';
+import 'package:taxi/views/widgets/all.dart';
 
-class StepProgress extends StatelessWidget {
+class StepProgress extends StatefulWidget {
   const StepProgress({Key? key}) : super(key: key);
 
+  @override
+  State<StepProgress> createState() => _StepProgressState();
+}
+
+class _StepProgressState extends State<StepProgress> {
   @override
   Widget build(BuildContext context) {
     int currentStep;
@@ -15,7 +22,7 @@ class StepProgress extends StatelessWidget {
       children: <Widget>[
         StepProgressIndicator(
           totalSteps: totalSteps,
-          currentStep: currentStep,
+          currentStep: const PickFile().currentState,
           size: 53,
           padding: 0,
           selectedColor: AppColors.darkOrange,
@@ -40,7 +47,9 @@ class StepProgress extends StatelessWidget {
         ),
         Center(
             child: Text(
-          '$currentStep / $totalSteps',
+          const PickFile().currentState.toString() +
+              '/' +
+              totalSteps.toString(),
           style: AppTextStyle.heading2.copyWith(
               fontSize: 17.0,
               fontWeight: FontWeight.w400,

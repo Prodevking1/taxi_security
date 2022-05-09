@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import '../../constants/all.dart';
 
 class BottomLinks extends StatelessWidget {
-  const BottomLinks({Key? key, this.left, this.right, this.toScreen})
-      : super(key: key);
+  const BottomLinks({
+    Key? key,
+    this.left,
+    this.right,
+    this.toScreen,
+  }) : super(key: key);
 
   final String? left;
   final String? right;
