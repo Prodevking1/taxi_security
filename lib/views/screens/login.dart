@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:taxi/constants/all.dart';
-import 'package:taxi/views/screens/register_1.dart';
-import 'package:taxi/views/screens/intro.dart';
+import 'package:taxi/views/screens/all.dart';
 import 'package:taxi/views/widgets/all.dart';
 
 class Login extends StatefulWidget {
@@ -53,6 +52,7 @@ class _LoginState extends State<Login> {
               buttonColor: AppColors.darkOrange,
               buttonText: 'Se connecter',
               textColor: AppColors.whiteText,
+              toScreen: Homepage(),
             ),
             space(10.0),
             const BottomLinks(

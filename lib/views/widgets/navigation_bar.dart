@@ -7,11 +7,13 @@ class Navbar extends StatelessWidget {
     Key? key,
     this.title,
     this.icon,
+    this.iconBorder,
     this.toScreen,
   }) : super(key: key);
 
   final String? title;
   final IconData? icon;
+  final bool? iconBorder;
   final Widget? toScreen;
 
   @override
@@ -24,7 +26,10 @@ class Navbar extends StatelessWidget {
           width: 40.0,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(6.0),
-            border: Border.all(color: AppColors.grey),
+            border: Border.all(
+                // ignore: unrelated_type_equality_checks
+                color:
+                    iconBorder == true ? AppColors.whiteText : AppColors.grey),
           ),
           child: Center(
             child: GestureDetector(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mvc_pattern/mvc_pattern.dart';
 import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:taxi/constants/all.dart';
 import 'package:taxi/views/widgets/all.dart';
@@ -22,7 +21,7 @@ class _StepProgressState extends State<StepProgress> {
       children: <Widget>[
         StepProgressIndicator(
           totalSteps: totalSteps,
-          currentStep: const PickFile().currentState,
+          currentStep: 3,
           size: 53,
           padding: 0,
           selectedColor: AppColors.darkOrange,
@@ -47,9 +46,7 @@ class _StepProgressState extends State<StepProgress> {
         ),
         Center(
             child: Text(
-          const PickFile().currentState.toString() +
-              '/' +
-              totalSteps.toString(),
+          currentStep.toString() + '/' + totalSteps.toString(),
           style: AppTextStyle.heading2.copyWith(
               fontSize: 17.0,
               fontWeight: FontWeight.w400,

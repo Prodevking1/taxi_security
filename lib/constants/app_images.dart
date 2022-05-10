@@ -3,3 +3,4 @@ const String login = 'assets/images/login.png';
 const String signup = 'assets/images/signup.png';
 const String otp = 'assets/images/otp.png';
 const String welcome = 'assets/images/welcome.png';
+const String id = 'assets/images/id.png';

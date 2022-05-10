@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:taxi/views/screens/otp_verification.dart';
 import 'package:taxi/views/widgets/info_text.dart';
 import '../widgets/all.dart';
 import '../screens/all.dart';

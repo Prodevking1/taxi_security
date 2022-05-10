@@ -1,6 +1,10 @@
 export 'login.dart';
 export 'intro.dart';
-export 'register_1.dart';
+export 'register.dart';
 export 'otp.dart';
 export 'otp_verification.dart';
-export 'welcome_1.dart';
+export 'welcome.dart';
+export 'homepage.dart';
+export 'settings.dart';
+export 'subscription.dart';
+export 'id.dart';
