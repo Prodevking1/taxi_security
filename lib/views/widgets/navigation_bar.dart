@@ -21,7 +21,7 @@ class Navbar extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          margin: const EdgeInsets.only(left: 20.0),
+          margin: const EdgeInsets.only(left: 40.0),
           height: 40.0,
           width: 40.0,
           decoration: BoxDecoration(

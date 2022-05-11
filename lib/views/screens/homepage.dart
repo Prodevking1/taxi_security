@@ -16,6 +16,7 @@ class Homepage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           space(size.height / 10.0),
+          // ignore: avoid_unnecessary_containers
           Container(
             child: Column(
               children: <Widget>[
@@ -34,6 +35,7 @@ class Homepage extends StatelessWidget {
           Expanded(
             child: ListView(
               scrollDirection: Axis.vertical,
+              physics: const BouncingScrollPhysics(),
               children: <Widget>[
                 Column(
                   children: const <Widget>[

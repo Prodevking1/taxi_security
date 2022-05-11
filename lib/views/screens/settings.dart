@@ -47,7 +47,7 @@ class _SettingsState extends State<Settings> {
               text: 'Termes et Conditions',
               prefixIcon: AppIcons.file,
             ),
-            const SettingRow(
+            SettingRow(
               text: 'Déconnexion',
               prefixIcon: AppIcons.signoout,
               toScreen: Login(),

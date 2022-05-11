@@ -17,7 +17,7 @@ class Welcome1 extends StatelessWidget {
         child: Column(
           children: <Widget>[
             space(size.height / 10.0),
-            const Navbar(
+            Navbar(
               title: 'Bienvenue',
               icon: Icons.chevron_left,
               toScreen: Login(),

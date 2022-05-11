@@ -17,7 +17,7 @@ class OtpVerification extends StatelessWidget {
         child: Column(
           children: <Widget>[
             space(size.height / 10.0),
-            const Navbar(
+            Navbar(
               icon: Icons.chevron_left,
               toScreen: SignUp(),
             ),

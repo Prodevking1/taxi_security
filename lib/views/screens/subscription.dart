@@ -37,63 +37,64 @@ class Subscription extends StatelessWidget {
             ),
             Expanded(
               child: ListView(
-                children: [
-                  const HistoryDetails(
+                physics: const BouncingScrollPhysics(),
+                children: const <Widget>[
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'Lun 12/02/2022',
                     type: 'Abonnement de 14 jours',
                     price: 5500,
                   ),
-                  const HistoryDetails(
+                  HistoryDetails(
                     payDate: 'sam 12/06/2022',
                     type: 'Abonnement de 30 jours',
                     price: 10000,
