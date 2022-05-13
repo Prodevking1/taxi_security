@@ -36,7 +36,13 @@ class RoundedButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(buttonBorder ?? 6.0),
           color: buttonColor ?? AppColors.darkOrange,
           child: TextButton(
-            onPressed: () => _submit(context),
+            onPressed: () => Navigator.push(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (c, a1, a2) => toScreen!,
+                transitionDuration: const Duration(seconds: 0),
+              ),
+            ),
             child: Center(
               child: Text(
                 buttonText!,

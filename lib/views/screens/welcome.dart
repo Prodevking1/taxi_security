@@ -1,11 +1,25 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 import 'package:taxi/views/widgets/rounded_card.dart';
 import '../widgets/all.dart';
 import '../screens/all.dart';
 import '../../constants/all.dart';
 
-class Welcome1 extends StatelessWidget {
+class Welcome1 extends StatefulWidget {
   const Welcome1({Key? key}) : super(key: key);
+
+  @override
+  State<Welcome1> createState() => _Welcome1State();
+}
+
+class _Welcome1State extends State<Welcome1> {
+  int currentIndex = 0;
+  final fileName = [
+    'Prendre une photo',
+    'Photo du permis',
+    'Photo de la carte grise'
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -41,31 +55,93 @@ class Welcome1 extends StatelessWidget {
             space(size.height / 15.0),
             RoundedCard(
               child: Column(
-                children: const <Widget>[
+                children: <Widget>[
                   ItemList(
-                    title: 'Prendre une photo',
-                    icon: Icon(AppIcons.camera),
+                    title:
+                        currentIndex == 1 ? fileName[1] : 'Prendre une photo',
+                    icon: const Icon(AppIcons.camera),
+                    onPress: currentIndex < 3 ? pick : null,
                   ),
                   ItemList(
-                    title: 'Photo du permis',
-                    icon: Icon(AppIcons.camera),
+                    title: currentIndex == 2 ? fileName[2] : 'Photo du permis',
+                    icon: const Icon(AppIcons.camera),
+                    onPress: currentIndex < 3 ? pick : null,
                   ),
                   ItemList(
-                    title: 'Photo de la carte',
-                    icon: Icon(AppIcons.camera),
+                    title: currentIndex == 3
+                        ? fileName[3]
+                        : 'Photo de la carte grise',
+                    icon: const Icon(AppIcons.camera),
+                    onPress: currentIndex < 3 ? pick : null,
                   ),
                 ],
               ),
             ),
             space(size.height / 15.0),
-            const SizedBox(
+            SizedBox(
               width: 323.0,
               height: 53.0,
-              child: StepProgress(),
+              child: Stack(
+                children: <Widget>[
+                  StepProgressIndicator(
+                    totalSteps: 3,
+                    currentStep: currentIndex,
+                    size: 53,
+                    padding: 0,
+                    selectedColor: AppColors.darkOrange,
+                    unselectedColor: AppColors.whiteOrange,
+                    roundedEdges: const Radius.circular(6.0),
+                    selectedGradientColor: LinearGradient(
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomRight,
+                      colors: [
+                        AppColors.darkOrange,
+                        AppColors.whiteOrange,
+                      ],
+                    ),
+                    unselectedGradientColor: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomLeft,
+                      colors: [
+                        AppColors.whiteOrange,
+                        AppColors.whiteOrange,
+                      ],
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      currentIndex.toString() + '/' + '3',
+                      style: AppTextStyle.heading2.copyWith(
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.w400,
+                          color: currentIndex < 2
+                              ? AppColors.greyText
+                              : AppColors.whiteText),
+                    ),
+                  )
+                ],
+              ),
             ),
           ],
         ),
       ),
     );
+  }
+
+  pick() async {
+    FilePickerResult? result = await FilePicker.platform.pickFiles();
+
+    if (result != null) {
+      final file = result.files.first;
+
+      setState(
+        () {
+          currentIndex++;
+          fileName[currentIndex] = file.name;
+        },
+      );
+    } else {
+      return;
+    }
   }
 }
