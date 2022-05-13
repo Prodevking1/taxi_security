@@ -1076,7 +1076,7 @@
 	//  - vs-minimal
 	//  - vs-seti
 	//  - material-icon-theme
-	"workbench.iconTheme": "vs-seti",
+	"workbench.iconTheme": "vscode-icons",
 
 	// Contrôle si la navigation au clavier dans les listes et les arborescences est automatiquement déclenchée simplement par la frappe. Si défini sur 'false', la navigation au clavier est seulement déclenchée avec l'exécution de la commande 'list.toggleKeyboardNavigation', à laquelle vous pouvez attribuer un raccourci clavier.
 	"workbench.list.automaticKeyboardNavigation": true,
@@ -1534,10 +1534,10 @@
 	"explorer.compactFolders": true,
 
 	// Contrôle si l’Explorateur devrait demander confirmation lorsque vous supprimez un fichier via la corbeille.
-	"explorer.confirmDelete": true,
+	"explorer.confirmDelete": false,
 
 	// Contrôle si l’Explorateur doit demander confirmation pour déplacer des fichiers et des dossiers par glisser/déplacer.
-	"explorer.confirmDragAndDrop": true,
+	"explorer.confirmDragAndDrop": false,
 
 	// Contrôle si l'explorateur doit demander une confirmation lors de l'annulation.
 	//  - verbose: Explorer vous demandera avant toutes les opérations d'annulation.
